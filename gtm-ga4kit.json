@@ -1,0 +1,1234 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-08-17 15:34:49",
+    "containerVersion": {
+        "path": "accounts/6003005475/containers/90986457/versions/0",
+        "accountId": "6003005475",
+        "containerId": "90986457",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6003005475/containers/90986457",
+            "accountId": "6003005475",
+            "containerId": "90986457",
+            "name": "GA4 Kit v2.1",
+            "publicId": "GTM-XXXXXXX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1660750454194",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6003005475/containers/90986457/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "tagId": "16",
+                "name": "GA4.01 - All Pages",
+                "type": "gaawc",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "user_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customerId}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "content_group"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - contentGroup}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "userProperties",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "user_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customerId}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "last_order"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customer.lastOrder}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "order_count"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customer.orderCount}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "total_spent"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customer.totalSpent}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "email"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customer.email}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "hashed_email"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - customer.email - hashed}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "user_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - userType}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendPageView",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableSendToServerContainer",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementId",
+                        "value": "{{***UpdateMe*** GA4 Measurement ID (G-)}}"
+                    }
+                ],
+                "fingerprint": "1659870996679",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "tagId": "31",
+                "name": "GA4.03 - Event - Purchase",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "purchase"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cJS - products - purchase - GA4}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "transaction_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - transaction_id}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "value"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - totalValue}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "tax"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - tax}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "shipping"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - shipping}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - currency}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "totalValueStatic"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - totalValue}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "currencyRate"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - currencyRate}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "paymentType"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{dlv - paymentType}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4.01 - All Pages"
+                    }
+                ],
+                "fingerprint": "1659870996686",
+                "firingTriggerId": [
+                    "28"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "tagId": "35",
+                "name": "GA4.02 - Event - View Item",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "view_item"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{cJS - product - detail - GA4}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA4.01 - All Pages"
+                    }
+                ],
+                "fingerprint": "1659870996687",
+                "firingTriggerId": [
+                    "34"
+                ],
+                "parentFolderId": "3",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "triggerId": "28",
+                "name": "cEvent - analyzify_purchase",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "analyzify_purchase"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1659870996684",
+                "parentFolderId": "3"
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "triggerId": "34",
+                "name": "cEvent - analyzify_productDetail",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "analyzify_productDetail"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1659870996686",
+                "parentFolderId": "3"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "4",
+                "name": "dlv - customer.orderCount",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.orderCount"
+                    }
+                ],
+                "fingerprint": "1660072374664",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "5",
+                "name": "dlv - productVariantTitle",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productVariantTitle"
+                    }
+                ],
+                "fingerprint": "1660072374663",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "6",
+                "name": "dlv - customer.lastOrder",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.lastOrder"
+                    }
+                ],
+                "fingerprint": "1660072374665",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "7",
+                "name": "dlv - productSku",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productSku"
+                    }
+                ],
+                "fingerprint": "1660072374688",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "8",
+                "name": "dlv - customer.email",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.email"
+                    }
+                ],
+                "fingerprint": "1660072374665",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "9",
+                "name": "dlv - transaction_id",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "transaction_id"
+                    }
+                ],
+                "fingerprint": "1659870996676",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "10",
+                "name": "dlv - customerId",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.id"
+                    }
+                ],
+                "fingerprint": "1660072374689",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "11",
+                "name": "dlv - customer.totalSpent",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.totalSpent"
+                    }
+                ],
+                "fingerprint": "1660072374687",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "12",
+                "name": "dlv - customer.email - hashed",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "customer.email_eh"
+                    }
+                ],
+                "fingerprint": "1660072374689",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "13",
+                "name": "dlv - contentGroup",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "contentGroup"
+                    }
+                ],
+                "fingerprint": "1660072374690",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "14",
+                "name": "dlv - userType",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "userType"
+                    }
+                ],
+                "fingerprint": "1660072374690",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "15",
+                "name": "***UpdateMe*** GA4 Measurement ID (G-)",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-UPDATEHERE"
+                    }
+                ],
+                "fingerprint": "1660750423135",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "17",
+                "name": "dlv - currencyRate",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "currencyRate"
+                    }
+                ],
+                "fingerprint": "1660072374714",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "18",
+                "name": "dlv - shipping",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "shipping"
+                    }
+                ],
+                "fingerprint": "1659870996680",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "19",
+                "name": "dlv - totalValue",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "totalValue"
+                    }
+                ],
+                "fingerprint": "1659870996681",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "20",
+                "name": "dlv - paymentType",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "paymentType"
+                    }
+                ],
+                "fingerprint": "1660072374712",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "21",
+                "name": "dlv - productCategory",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productCategory"
+                    }
+                ],
+                "fingerprint": "1660072374713",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "22",
+                "name": "dlv - productName",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productName"
+                    }
+                ],
+                "fingerprint": "1659870996682",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "23",
+                "name": "dlv - productId",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productId"
+                    }
+                ],
+                "fingerprint": "1659870996683",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "24",
+                "name": "dlv - productPrice",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productPrice"
+                    }
+                ],
+                "fingerprint": "1659870996683",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "25",
+                "name": "dlv - productBrand",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productBrand"
+                    }
+                ],
+                "fingerprint": "1660072374715",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "26",
+                "name": "dlv - productQuantity",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "1"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productQuantity"
+                    }
+                ],
+                "fingerprint": "1659870996684",
+                "parentFolderId": "3",
+                "formatValue": {
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "1"
+                    }
+                }
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "27",
+                "name": "cJS - products - purchase - GA4",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n\nvar productName = {{dlv - productName}};\nvar productId = {{dlv - productId}};\nvar productPrice = {{dlv - productPrice}};\nvar productBrand = {{dlv - productBrand}};\nvar productCategory = {{dlv - productCategory}};\nvar productVariant = {{dlv - productVariantTitle}};\nvar productQty = {{dlv - productQuantity}};\nvar items = [];\n\nfor( i = 0; i < productId.length; i++ ){\n    items.push(     \n        {\n          'item_name': productName[i],\n          'item_id': productId[i],\n          'item_brand': productBrand[i],\n          'item_category': productCategory[i],\n          'item_variant': productVariant[i],\n          'price': productPrice[i],\n          'quantity': productQty[i]          \n        }\n    );\n}\nreturn items;\n}"
+                    }
+                ],
+                "fingerprint": "1659870996688",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "29",
+                "name": "dlv - tax",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "tax"
+                    }
+                ],
+                "fingerprint": "1659870996685",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "30",
+                "name": "dlv - currency",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "currency"
+                    }
+                ],
+                "fingerprint": "1659870996685",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "32",
+                "name": "dlv - productVariantId",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productVariantId"
+                    }
+                ],
+                "fingerprint": "1660072374714",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "33",
+                "name": "cJS - product - detail - GA4",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  return [{\n    'item_name': {{dlv - productName}},\n    'item_id': {{dlv - productId}},\n    'item_brand': {{dlv - productBrand}},\n    'item_category': {{dlv - productCategory}},\n    'item_variant': {{dlv - productVariantTitle}},\n    'price': {{dlv - productPrice}},\n    'quantity': {{dlv - productQuantity}},\n  }];\n}"
+                    }
+                ],
+                "fingerprint": "1659870996688",
+                "parentFolderId": "3",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "variableId": "36",
+                "name": "dlv - productType",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "productType"
+                    }
+                ],
+                "fingerprint": "1660072374715",
+                "parentFolderId": "3",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6003005475",
+                "containerId": "90986457",
+                "folderId": "3",
+                "name": "Shopify GA4 Kit V2.1",
+                "fingerprint": "1660072360252"
+            }
+        ],
+        "fingerprint": "1660750489858",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003005475/containers/90986457/versions/0?apiLink=version"
+    }
+}
